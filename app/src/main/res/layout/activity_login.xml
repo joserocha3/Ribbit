@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".LoginActivity"
+                style="@style/AuthBackground">
+
+    <include layout="@layout/auth_common"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthFieldContainer">
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:hint="@string/username_hint"
+            style="@style/EditTextTheme">
+        <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:inputType="textPassword"
+            android:hint="@string/password_hint"
+            style="@style/EditTextTheme">>
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/editTextLayout"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+    <Button
+        android:id="@+id/loginButton"
+        android:text="@string/login_button_label"
+        android:layout_height="@dimen/sign_in_button_height"
+        style="@style/ButtonTheme"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomTextLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/signUpText"
+                android:text="@string/sign_up_text"
+                style="@style/AuthBottomText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/forgotPasswordText"
+                android:text="@string/sign_up_forgot_password"
+                style="@style/AuthBottomText"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"/>
+
+</RelativeLayout>

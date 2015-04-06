@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Applied to the entire application-->
+    <style name="Theme.Ribbit" parent="@style/Theme.AppCompat.Light">
+        <item name="android:listViewStyle">@style/LightPurpleBackgroundStyle</item>
+        <item name="android:gridViewStyle">@style/LightPurpleBackgroundStyle.GridView</item>
+        <item name="android:progressBarStyleLarge">@style/ProgressBarAppTheme</item>
+
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/Overflow</item>
+
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle</item>
+        <item name="actionOverflowButtonStyle">@style/Overflow</item>
+    </style>
+
+    <!--Action bar styles-->
+    <style name="ActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/ab_solid_ribbit</item>                <!--background of the top bar-->
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_ribbit</item> <!--background of the tabs-->
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_ribbit</item>    <!--???-->
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>      <!--Action bar text color-->
+
+        <item name="background">@drawable/ab_solid_ribbit</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_ribbit</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_ribbit</item>
+        <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBarTabStyle" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_ribbit</item> <!--This has the selection indicator drawables-->
+        <item name="background">@drawable/tab_indicator_ab_ribbit</item>
+        <item name="color">@drawable/tab_indicator_ab_ribbit</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="Overflow" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_overflow</item>
+    </style>
+
+    <style name="LightPurpleBackgroundStyle">
+        <item name="android:background">@color/light_purple_button</item>
+        <item name="android:divider">@null</item>
+
+        <item name="background">@color/light_purple_button</item>
+        <item name="divider">@null</item>
+    </style>
+
+    <style name="LightPurpleBackgroundStyle.GridView">
+        <item name="android:padding">@dimen/user_grid_spacing</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="ProgressBarAppTheme" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_bar_custom</item>
+        <item name="android:indeterminateDuration">1200</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:minHeight">120dp</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:maxHeight">120dp</item>
+        <item name="android:maxWidth">120dp</item>
+    </style>
+
+    <style name="ButtonTheme" parent="android:style/Widget.Button">
+        <item name="android:background">@drawable/button_custom</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_height">@dimen/sign_in_button_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="EditTextTheme" parent="android:style/Widget.EditText">
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="AuthBackground">
+        <item name="android:background">@drawable/background_fill</item>
+    </style>
+
+    <style name="AuthFieldContainer">
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">@dimen/login_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/login_vertical_padding</item>
+        <item name="android:paddingLeft">@dimen/login_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/login_horizontal_padding</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/login_vertical_margin</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/subtitle</item>
+    </style>
+
+    <style name="AuthBackgroundImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:src">@drawable/background</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:contentDescription">@string/content_desc_background</item>
+    </style>
+
+    <style name="AuthTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AuthTitle.AuthSubtitle">
+        <item name="android:layout_below">@+id/title</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_alignParentTop">false</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="AuthBottomText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="GridImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+</resources>
